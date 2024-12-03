@@ -168,6 +168,8 @@ void adicionapalavra() {
 
 int main() {
 
+    printf("Testando...\n");
+
     abertura();
     escolhepalavra();
 
