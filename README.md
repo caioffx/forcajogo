@@ -1,4 +1,141 @@
 
+# Hangman Game in C
+
+This is a simple Hangman game implemented in C. The game selects a random word from a word bank file, and the player must guess the word, one letter at a time. The game ends when the player guesses the word correctly or makes 5 incorrect guesses.
+
+## Features
+
+- The game selects a random word from a `words.txt` file.
+- The player can guess letters, and the game shows the progress of the hidden word.
+- If the player makes 5 incorrect guesses, the game ends and they are "hanged."
+- The player can add new words to the word bank during the game.
+
+## How to Play
+
+1. The game starts with an introduction screen.
+2. The player must guess the letters of the word.
+3. The game shows progress with correct letters and the drawing of a hangman figure that gets completed as the player makes mistakes.
+4. The player wins if they guess all the letters of the word before making 5 mistakes.
+5. If not, the player loses, and the word is revealed.
+
+## How to Run
+
+1. Make sure you have a C compiler installed, such as `gcc`.
+2. Compile the code using the following command:
+
+   ```bash
+   gcc hanginggame.c -o hanging
+   ```
+
+3. Run the game:
+
+   ```bash
+   ./hanging
+   ```
+
+## Requirements
+
+- The game relies on a `words.txt` file containing a word bank. The format of the file is as follows:
+  - The first line should contain the number of words in the file.
+  - Each word should be on a separate line.
+
+### Example of `palavras.txt`:
+
+```
+5
+WATERMELOON
+BANANA
+ORANGE
+STRAWBERRY
+APPLE
+```
+
+## Skills Developed in C
+
+Developing this Hangman game in C helps improve several important C programming skills, including:
+
+### 1. **String Manipulation**
+   - Using functions like `strlen`, `fscanf`, and `scanf` to work with strings allows for practicing text manipulation and comparison, which is crucial in many programs that deal with text input and output.
+
+### 2. **Control Flow and Loop Structures**
+   - The use of structures like `for`, `while`, and `if-else` in controlling the flow of the game, allowing iteration over lists and making decisions based on specific conditions, such as the number of errors made.
+
+### 3. **File Handling**
+   - The ability to open, read, and write to files is essential in C. In this game, the word bank is loaded from a `words.txt` file, and the code also allows for adding new words to the file during runtime.
+
+### 4. **Memory Management**
+   - While explicit dynamic memory allocation is not used in this code, working with static arrays for storing letters and guesses helps reinforce memory management practices.
+
+### 5. **Functions and Modularization**
+   - The code is organized into specific functions for tasks like drawing the hangman (`drawHangman`), checking if a letter has been guessed (`alreadyGuessed`), and verifying if the player has won (`hasWon`). This enhances the readability and modularization of the code, which is a recommended practice in programming.
+
+### 6. **Programming Logic and Algorithms**
+   - The game implements several simple algorithms, such as checking if the player has guessed all the letters, counting mistakes, and drawing the hangman state. Additionally, using a random number generator (`rand`) to select words provides an introduction to game programming and dynamic systems.
+
+### 7. **User Interaction**
+   - The code makes use of interactive inputs and outputs with the player, helping develop the ability to capture user input and provide dynamic feedback during the program's execution.
+
+### 8. **Working with Conditional Data**
+   - The implementation of checking the game state (whether the player has won or lost) depends on evaluating conditional data as the game progresses, allowing practice with verification logic and decision-making.
+
+### 9. **Using Standard Libraries**
+   - The code uses several standard C libraries like `stdio.h`, `stdlib.h`, `string.h`, and `time.h`, which are essential for handling input/output, string manipulation, and random numbers.
+
+### 10. **Working with Simple Data Types**
+   - The code uses basic data types like `char` and `int` to represent letters, guesses, and counters, reinforcing the understanding of primitive types and their manipulation.
+
+## Functions
+
+### `letterExists(char letter)`
+
+Checks if the given letter exists in the secret word.
+
+### `wrongguesses()`
+
+Counts how many incorrect guesses the player has made so far.
+
+### `isHanged()`
+
+Returns true if the player has made 5 incorrect guesses.
+
+### `hasWon()`
+
+Checks if the player has guessed all the letters of the secret word.
+
+### `opening()`
+
+Displays the introduction of the game.
+
+### `makeGuess()`
+
+Reads the player's guess and checks if they guessed correctly or incorrectly.
+
+### `alreadyGuessed(char letter)`
+
+Checks if the player has already guessed a specific letter.
+
+### `drawHangman()`
+
+Draws the current state of the hangman figure.
+
+### `selectWord()`
+
+Selects a random word from the `palavras.txt` file.
+
+### `insertWord()`
+
+Allows the player to add a new word to the word bank.
+
+## Contributions
+
+Feel free to improve or add new features to this game! If you find any bugs or have suggestions, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+# PT-BR
+
 # Jogo da Forca em C
 
 Este é um jogo simples de forca implementado em linguagem C. O jogo escolhe uma palavra aleatória de um banco de dados de palavras, e o jogador deve adivinhar a palavra, letra por letra. O jogo termina quando o jogador acerta a palavra ou comete 5 erros.
