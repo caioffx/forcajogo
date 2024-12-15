@@ -168,8 +168,6 @@ void adicionapalavra() {
 
 int main() {
 
-    printf("Testando...\n");
-
     abertura();
     escolhepalavra();
 
@@ -208,9 +206,9 @@ int main() {
         printf(" |                   |      \n");
         printf(" \\__      XXX      __/     \n");
         printf("   |\\     XXX     /|       \n");
-        printf("   | |           | |        \n");
-        printf("   | I I I I I I I |        \n");
-        printf("   |  I I I I I I  |        \n");
+        printf("   | |           |  |       \n");
+        printf("   | I I I I I I I  |       \n");
+        printf("   |  I I I I I I   |       \n");
         printf("   \\_             _/       \n");
         printf("     \\_         _/         \n");
         printf("       \\_______/           \n");
