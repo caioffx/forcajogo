@@ -111,7 +111,7 @@ void drawHangman() {
 void selectWord() {
     FILE* f;
 
-    f = fopen("palavras.txt", "r");
+    f = fopen("words.txt", "r");
     if(f == 0) {
         printf("Words database not available.\n\n");
         exit(1);
@@ -145,7 +145,7 @@ void insertWord() {
 
         FILE* f;
 
-        f = fopen("palavras.txt", "r+");
+        f = fopen("words.txt", "r+");
         if(f == 0) {
             printf("Words database not available.\n\n");
             exit(1);
