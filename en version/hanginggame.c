@@ -179,7 +179,7 @@ int main() {
     } while (!hasWon() && !isHanged());
 
     if(hasWon()) {
-        printf("\Congrats, you won!!\n\n");
+        printf("\nCongrats, you won!!\n\n");
 
         printf("       ___________      \n");
         printf("      '._==_==_=_.'     \n");

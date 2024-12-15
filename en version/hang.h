@@ -1,6 +1,6 @@
 #define WORD_SIZE 20
 
-int letterExists();
+int letterExists(char letter);
 void opening();
 void makeGuess();
 void drawHangman();
